@@ -26,10 +26,10 @@ function QuizTwo({ score, setScore }: QuizTwoProp) {
     <>
       <Header />
       <QuestionBox step={2}>
-        <div className="p-10 border border-black mt-5">
+        <div className="p-3  text-center w-3/5">
           {questions.map((query) => (
             <ul key={query.id}>
-              <h1>
+              <h1 className="pb-6 dark:text-white font-headers font-semibold text-3xl">
                 {query?.question} {score}
               </h1>
               {query?.options?.map((option) => (
