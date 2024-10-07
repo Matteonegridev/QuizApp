@@ -5,24 +5,23 @@ import Question from "../utils/Questions";
 
 const questions = [
   {
-    id: 1,
-    answer: "risposta2",
-  },
-  {
     id: 2,
-    answer: "risposta2",
-  },
-  {
-    id: 3,
-    answer: "risposta2",
-  },
-  {
-    id: 4,
-    answer: "risposta2",
+    question: "What is the capital of Italy?",
+    options: ["Paris", "Berlin", "London", "Rome"],
+    answer: "Rome",
   },
 ];
 
-function QuizTwo() {
+type QuizTwoProp = {
+  score: number;
+  setScore: React.Dispatch<React.SetStateAction<number>>;
+};
+
+function QuizTwo({ score, setScore }: QuizTwoProp) {
+  const handleAnswer = (answer: string) => {
+    if (answer === questions[0].answer) setScore(score + 1);
+  };
+
   return (
     <>
       <Header />
@@ -30,7 +29,16 @@ function QuizTwo() {
         <div className="p-10 border border-black mt-5">
           {questions.map((query) => (
             <ul key={query.id}>
-              <Question text={query.answer} />
+              <h1>
+                {query?.question} {score}
+              </h1>
+              {query?.options?.map((option) => (
+                <Question
+                  onClick={() => handleAnswer(option)}
+                  key={option}
+                  text={option}
+                />
+              ))}
             </ul>
           ))}
         </div>
