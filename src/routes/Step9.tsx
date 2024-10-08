@@ -45,7 +45,7 @@ function QuizNine({ score, setScore }: QuizNineProp) {
     if (testDone) {
       setTimeout(() => {
         navigate("/questions/10");
-      }, 2000);
+      }, 3000);
     }
   }, [testDone, navigate, setIsLoading, isLoading]);
 
