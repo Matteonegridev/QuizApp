@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import Button from "../utils/Button";
+import Button from "../utils/ButtonNext";
 import QuestionBox from "../utils/Question-box";
 import Question from "../utils/Questions";
 
@@ -43,7 +43,7 @@ function QuizThree({ score, setScore }: QuizThreeProp) {
           ))}
         </div>
       </QuestionBox>
-      <Button currentStep={3} className="" text="Next" />
+      <Button currentStep={3} text="Next" />
     </>
   );
 }

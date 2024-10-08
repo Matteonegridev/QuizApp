@@ -1,4 +1,4 @@
-import Button from "../utils/Button";
+import Button from "../utils/ButtonNext";
 import Header from "./Header";
 import Image from "./Image";
 
@@ -31,11 +31,7 @@ function MainPage() {
           </p>
           <hr />
           <div className="my-10">
-            <Button
-              currentStep={0}
-              className="text-xl font-paragr rounded-md transition-all 250ms ease-in hover:bg-orange-300 px-8 py-2 bg-orange-400 font-semibold text-black dark:text-white"
-              text="Start!"
-            />
+            <Button currentStep={0} text="Start!" />
           </div>
         </div>
         <div className="p-8">
