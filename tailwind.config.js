@@ -12,6 +12,9 @@ export default {
         "custom-light": "5px 8px 0 0 rgb(115, 0, 192)", // shadow  light mode
         "custom-dark": "5px 8px 0 0 rgb(231, 231, 231)", // shadow  dark mode
       },
+      colors: {
+        orangeAccent: "#FF8C00",
+      },
     },
   },
   plugins: [],

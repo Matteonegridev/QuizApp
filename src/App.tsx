@@ -11,6 +11,7 @@ import QuizSeven from "./routes/Step7.tsx";
 import QuizEight from "./routes/Step8.tsx";
 import QuizNine from "./routes/Step9.tsx";
 import ErrorPage from "./routes/Error-page.tsx";
+import ScorePage from "./routes/Step10.tsx";
 
 function App() {
   const [score, setScore] = useState(0);
@@ -54,6 +55,10 @@ function App() {
         <Route
           path="/questions/9"
           element={<QuizNine score={score} setScore={setScore} />}
+        />
+        <Route
+          path="/questions/10"
+          element={<ScorePage score={score} setScore={setScore} />}
         />
         <Route path="*" element={<ErrorPage />} />
       </Routes>

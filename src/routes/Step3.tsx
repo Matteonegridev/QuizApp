@@ -1,14 +1,16 @@
+import { useState } from "react";
 import Header from "../components/Header";
-import Button from "../utils/ButtonNext";
 import QuestionBox from "../utils/Question-box";
 import Question from "../utils/Questions";
+import ButtonNext from "../utils/ButtonNext";
+import ButtonBack from "../utils/ButtonBack";
 
 const questions = [
   {
-    id: 3,
-    question: "What is the capital of Portugal?",
-    options: ["Paris", "Lisbona", "London", "Rome"],
-    answer: "Lisbona",
+    id: 1,
+    question: "What is the capital of France?",
+    options: ["Paris", "Berlin", "London", "Rome"],
+    answer: "Paris",
   },
 ];
 
@@ -18,19 +20,31 @@ type QuizThreeProp = {
 };
 
 function QuizThree({ score, setScore }: QuizThreeProp) {
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+
   const handleAnswer = (answer: string) => {
-    if (answer === questions[0].answer) setScore(score + 1);
+    const correctAnswer = questions[0].answer;
+
+    if (selectedAnswer === correctAnswer && answer !== correctAnswer) {
+      setScore(score - 1);
+    }
+
+    if (selectedAnswer !== correctAnswer && answer === correctAnswer) {
+      setScore(score + 1);
+    }
+
+    setSelectedAnswer(answer);
   };
 
   return (
     <>
       <Header />
       <QuestionBox step={3}>
-        <div className="p-10 border border-black mt-5">
+        <div className="p-3  text-center w-3/5">
           {questions.map((query) => (
-            <ul key={query.id}>
-              <h1>
-                {query?.question} {score}
+            <div key={query.id}>
+              <h1 className="pb-6 dark:text-white font-headers font-medium text-3xl ">
+                {query?.question}
               </h1>
               {query?.options?.map((option) => (
                 <Question
@@ -39,12 +53,16 @@ function QuizThree({ score, setScore }: QuizThreeProp) {
                   text={option}
                 />
               ))}
-            </ul>
+            </div>
           ))}
+          <div className="mt-4 flex gap-10 justify-center items-center">
+            <ButtonNext currentStep={3} text="Next" />
+            <ButtonBack currentStep={3} text="Back" />
+          </div>
         </div>
       </QuestionBox>
-      <Button currentStep={3} text="Next" />
     </>
   );
 }
+
 export default QuizThree;
