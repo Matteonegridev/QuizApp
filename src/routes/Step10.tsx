@@ -15,10 +15,10 @@ function ScorePage({ score, setScore }: ScorePageProp) {
   return (
     <>
       <Header />
-      <section className="grid place-content-center min-h-screen -mt-14 [&>*]:dark:text-white ">
+      <section className="grid place-content-center min-h-screen -mt-14 sm:-mt-28 [&>*]:dark:text-white ">
         <div className=" text-center">
-          <h1 className="text-8xl font-headers font-extrabold leading-[7rem]">
-            Congratulazioni! 🎉🎉{" "}
+          <h1 className="text-8xl sm:text-4xl font-headers font-extrabold leading-[7rem]">
+            Congratulazioni! <span className="md:hidden sm:hidden">🎉🎉</span>{" "}
             <p className="font-medium">Hai terminato il Quiz!</p>
           </h1>
           <div className="p-5 mb-4">
@@ -37,25 +37,36 @@ function ScorePage({ score, setScore }: ScorePageProp) {
               per vedere il tuo risultato!
             </p>
           </div>
-          {isShow &&
-            (score <= 3 ? (
-              <div className="mb-5">
-                <p>Waglio magnt u cazz: {score}</p>
-              </div>
-            ) : score >= 4 && score <= 7 ? (
-              <div className="mb-5">
-                <p>{score} bravoooo </p>
-              </div>
-            ) : (
-              <div className="mb-5">
-                <p>{score} mostrooo </p>
-              </div>
-            ))}
-
-          <div>
+          <div
+            className={`transition-all  duration-500 ease-in-out ${
+              isShow ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"
+            }`}
+          >
+            {isShow &&
+              (score <= 4 ? (
+                <div className="mb-5">
+                  <p className="font-paragr font-light text-xl ">
+                    Che delusione! Hai totalizzato {score} punti!
+                  </p>
+                </div>
+              ) : score >= 4 && score <= 7 ? (
+                <div className="mb-5">
+                  <p className="font-paragr font-light text-xl ">
+                    {score} Credo che puoi fare ancora meglio... {score}{" "}
+                  </p>
+                </div>
+              ) : (
+                <div className="mb-5">
+                  <p className="font-paragr font-light text-xl ">
+                    Geniale! Ecco il tuo punteggio: {score}
+                  </p>
+                </div>
+              ))}
+          </div>
+          <div className="sm:flex sm:flex-col gap-9">
             <h1 className="text-4xl font-paragr">Vuoi ricominciare il Quiz?</h1>
             <Link
-              className="font-paragr text-violet-600 text-2xl font-bold dark:text-orangeAccent"
+              className="font-paragr  text-violet-600 text-2xl font-bold dark:text-orangeAccent"
               to={"/"}
               onClick={onRestart}
             >

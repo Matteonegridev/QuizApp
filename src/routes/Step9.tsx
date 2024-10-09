@@ -50,7 +50,7 @@ function QuizNine({ score, setScore }: QuizNineProp) {
     if (testDone) {
       setTimeout(() => {
         navigate("/questions/10");
-      }, 3000);
+      }, 2000);
     }
   }, [testDone, navigate, setIsLoading, isLoading]);
 
