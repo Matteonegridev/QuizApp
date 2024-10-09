@@ -22,10 +22,6 @@ function DarkToggle() {
 
   useEffect(() => {
     sessionStorage.setItem("darkMode", JSON.stringify(isDark));
-
-    return () => {
-      sessionStorage.removeItem("darkMode");
-    };
   }, [isDark]);
 
   const toggleDark = () => {
