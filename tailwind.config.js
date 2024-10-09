@@ -14,6 +14,8 @@ export default {
       },
       colors: {
         orangeAccent: "#FF8C00",
+        "bg-light": "#dee4e7",
+        "bg-dark": "#37474f",
       },
       screens: {
         sm: { max: "650px" },

@@ -7,9 +7,14 @@ import ButtonNext from "../utils/ButtonNext";
 const questions = [
   {
     id: 1,
-    question: "What is the capital of France?",
-    options: ["Paris", "Berlin", "London", "Rome"],
-    answer: "Paris",
+    question: "Qual è l'obiettivo principale dell'economia circolare?",
+    options: [
+      "Ridurre i rifiuti e massimizzare l'uso delle risorse",
+      "Aumentare la produzione di nuovi beni",
+      "Promuovere prodotti monouso",
+      "Massimizzare l'uso delle discariche",
+    ],
+    answer: "Ridurre i rifiuti e massimizzare l'uso delle risorse",
   },
 ];
 
@@ -39,10 +44,10 @@ function QuizOne({ score, setScore }: QuizOneProp) {
     <>
       <Header />
       <QuestionBox step={1}>
-        <div className="p-3 text-center w-3/5 sm:w-[65ch]">
+        <div className="p-3 text-center sm:w-auto ">
           {questions.map((query) => (
             <div key={query.id}>
-              <h1 className="pb-6 dark:text-white font-headers font-medium text-3xl sm:text-xl sm:text-balance ">
+              <h1 className="pb-6 dark:text-white font-headers  font-medium text-2xl sm:text-xl sm:text-balance ">
                 {query?.question}
               </h1>
               {query?.options?.map((option) => (

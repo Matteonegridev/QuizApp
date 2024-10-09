@@ -7,10 +7,11 @@ import ButtonBack from "../utils/ButtonBack";
 
 const questions = [
   {
-    id: 1,
-    question: "What is the capital of France?",
-    options: ["Paris", "Berlin", "London", "Rome"],
-    answer: "Paris",
+    id: 3,
+    question:
+      "Come si chiama il processo di trasformazione dei materiali di scarto in nuovi materiali e oggetti?",
+    options: ["Riciclo", "Discarica", "Incenerimento", "Compostaggio"],
+    answer: "Riciclo",
   },
 ];
 

@@ -7,10 +7,15 @@ import ButtonBack from "../utils/ButtonBack";
 
 const questions = [
   {
-    id: 1,
-    question: "What is the capital of France?",
-    options: ["Paris", "Berlin", "London", "Rome"],
-    answer: "Paris",
+    id: 7,
+    question: "Qual è il vantaggio principale del riciclo?",
+    options: [
+      "Ridurre la quantità di rifiuti nelle discariche",
+      "Aumentare il consumo di energia",
+      "Promuovere l'uso di prodotti monouso",
+      "Aumentare l'inquinamento",
+    ],
+    answer: "Ridurre la quantità di rifiuti nelle discariche",
   },
 ];
 

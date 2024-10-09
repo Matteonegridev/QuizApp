@@ -7,10 +7,10 @@ import ButtonBack from "../utils/ButtonBack";
 
 const questions = [
   {
-    id: 1,
-    question: "What is the capital of France?",
-    options: ["Paris", "Berlin", "London", "Rome"],
-    answer: "Paris",
+    id: 8,
+    question: "Quale dei seguenti materiali è più difficile da riciclare?",
+    options: ["Plastica", "Vetro", "Carta", "Metallo"],
+    answer: "Plastica",
   },
 ];
 

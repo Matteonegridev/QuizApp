@@ -7,10 +7,15 @@ import ButtonBack from "../utils/ButtonBack";
 
 const questions = [
   {
-    id: 1,
-    question: "What is the capital of France?",
-    options: ["Paris", "Berlin", "London", "Rome"],
-    answer: "Paris",
+    id: 6,
+    question: "Quale dei seguenti è un esempio di economia circolare?",
+    options: [
+      "Riparare e riutilizzare i prodotti",
+      "Gettare i prodotti dopo un solo utilizzo",
+      "Produrre nuovi beni da materie prime vergini",
+      "Aumentare la produzione di rifiuti",
+    ],
+    answer: "Riparare e riutilizzare i prodotti",
   },
 ];
 

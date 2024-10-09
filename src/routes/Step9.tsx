@@ -5,14 +5,19 @@ import Question from "../utils/Questions";
 import ButtonBack from "../utils/ButtonBack";
 import { useNavigate } from "react-router-dom";
 import LoadingPage from "./Loading";
-// import LoadingPage from "./Loading";
 
 const questions = [
   {
-    id: 1,
-    question: "What is the capital of France?",
-    options: ["Paris", "Berlin", "London", "Rome"],
-    answer: "Paris",
+    id: 9,
+    question:
+      "Qual è uno dei principali ostacoli all'adozione dell'economia circolare?",
+    options: [
+      "Mancanza di consapevolezza e educazione",
+      "Disponibilità di risorse naturali",
+      "Aumento della domanda di prodotti riciclati",
+      "Riduzione dei costi di produzione",
+    ],
+    answer: "Mancanza di consapevolezza e educazione",
   },
 ];
 

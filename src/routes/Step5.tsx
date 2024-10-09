@@ -7,10 +7,15 @@ import ButtonBack from "../utils/ButtonBack";
 
 const questions = [
   {
-    id: 1,
-    question: "What is the capital of France?",
-    options: ["Paris", "Berlin", "London", "Rome"],
-    answer: "Paris",
+    id: 5,
+    question: "Cosa significa il termine 'upcycling'?",
+    options: [
+      "Trasformare i materiali di scarto in prodotti di valore superiore",
+      "Bruciare i rifiuti per generare energia",
+      "Seppellire i rifiuti nelle discariche",
+      "Scomporre i rifiuti in materie prime",
+    ],
+    answer: "Trasformare i materiali di scarto in prodotti di valore superiore",
   },
 ];
 

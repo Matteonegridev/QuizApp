@@ -1,4 +1,4 @@
-import Button from "../utils/ButtonNext";
+import ButtonNext from "../utils/ButtonNext";
 import Header from "./Header";
 import Image from "./Image";
 
@@ -7,25 +7,27 @@ function MainPage() {
     <>
       <Header />
       <section
-        className="bg-[#dee4e7] dark:bg-[#37474f] rounded-2xl grid 
+        className="bg-bg-light dark:bg-bg-dark rounded-2xl grid 
         grid-cols-[1fr_39rem] gap-5 sm:flex sm:flex-col sm:mt-8 md:grid-cols-[1fr_15rem] md:items-center "
       >
-        <div className="p-8 [&>*]:text-pretty">
-          <h1 className="text-black dark:text-white text-7xl font-black mb-10 font-headers">
+        <div className="p-8 [&>*]:text-pretty flex flex-col gap-12 sm:gap-16">
+          <h1 className="text-black dark:text-white text-7xl font-black  font-headers">
             Quizs
           </h1>
-          <p className="text-black dark:text-white text-lg  font-black mb-8 sm:mb-4 font-paragr">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-          </p>
-          <hr />
-          <p className="text-black dark:text-white text-lg font-black my-8 sm:my-4 font-paragr">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-            dolore qui voluptatem aut tenetur quod unde vel, veritatis est iste
-            ipsam
-          </p>
-          <hr />
-          <div className="my-10 sm:mt-10 sm:flex smjustify-center sm:items-center sm:text-center ">
-            <Button currentStep={0} text="Start!" />
+          <div>
+            <p className="text-black dark:text-white text-lg font-black   font-paragr">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            </p>
+          </div>
+          <div>
+            <p className="text-black dark:text-white text-lg font-black  font-paragr">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+              dolore qui voluptatem aut tenetur quod unde vel, veritatis est
+              iste ipsam
+            </p>
+          </div>
+          <div className="2xl:pt-24 sm:flex sm:justify-center sm:items-center sm:text-center ">
+            <ButtonNext currentStep={0} text="Start!" />
           </div>
         </div>
         <div className="p-8 sm:hidden ">
