@@ -28,8 +28,8 @@ type QuizNineProp = {
 
 function QuizNine({ score, setScore }: QuizNineProp) {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-  const [testDone, setTestDone] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [testDone, setTestDone] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const navigate = useNavigate();
 
   const handleAnswer = (answer: string) => {
@@ -56,7 +56,7 @@ function QuizNine({ score, setScore }: QuizNineProp) {
 
   return (
     <>
-      {!isLoading ? (
+      {isLoading ? (
         <LoadingPage />
       ) : (
         <>
@@ -73,7 +73,7 @@ function QuizNine({ score, setScore }: QuizNineProp) {
                       onClick={() => {
                         handleAnswer(option);
                         setTestDone(true);
-                        setIsLoading(false);
+                        setIsLoading(true);
                       }}
                       key={option}
                       text={option}
