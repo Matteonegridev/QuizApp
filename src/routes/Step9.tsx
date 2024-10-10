@@ -28,8 +28,8 @@ type QuizNineProp = {
 
 function QuizNine({ score, setScore }: QuizNineProp) {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-  const [testDone, setTestDone] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [testDone, setTestDone] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const navigate = useNavigate();
 
   const handleAnswer = (answer: string) => {
@@ -56,16 +56,16 @@ function QuizNine({ score, setScore }: QuizNineProp) {
 
   return (
     <>
-      {!isLoading ? (
+      {isLoading ? (
         <LoadingPage />
       ) : (
         <>
           <Header />
           <QuestionBox step={9}>
-            <div className="p-3  text-center w-3/5">
+            <div className="p-3 text-center sm:w-auto">
               {questions.map((query) => (
                 <div key={query.id}>
-                  <h1 className="pb-6 dark:text-white font-headers font-medium text-3xl ">
+                  <h1 className="pb-6 dark:text-white font-headers  font-medium text-2xl sm:text-xl sm:text-balance ">
                     {query?.question}
                   </h1>
                   {query?.options?.map((option) => (
@@ -73,7 +73,7 @@ function QuizNine({ score, setScore }: QuizNineProp) {
                       onClick={() => {
                         handleAnswer(option);
                         setTestDone(true);
-                        setIsLoading(false);
+                        setIsLoading(true);
                       }}
                       key={option}
                       text={option}

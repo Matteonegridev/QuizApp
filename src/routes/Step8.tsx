@@ -40,10 +40,10 @@ function QuizEight({ score, setScore }: QuizEightProp) {
     <>
       <Header />
       <QuestionBox step={8}>
-        <div className="p-3  text-center w-3/5">
+        <div className="p-3 text-center sm:w-auto">
           {questions.map((query) => (
             <div key={query.id}>
-              <h1 className="pb-6 dark:text-white font-headers font-medium text-3xl ">
+              <h1 className="pb-6 dark:text-white font-headers  font-medium text-2xl sm:text-xl sm:text-balance ">
                 {query?.question}
               </h1>
               {query?.options?.map((option) => (
