@@ -27,7 +27,7 @@ function MainPage() {
             </p>
           </div>
           <div className="2xl:pt-24 sm:flex sm:justify-center sm:items-center sm:text-center ">
-            <ButtonNext currentStep={0} text="Start!" />
+            <ButtonNext currentStep={0} text="Comincia!" />
           </div>
         </div>
         <div className="p-8 sm:hidden ">

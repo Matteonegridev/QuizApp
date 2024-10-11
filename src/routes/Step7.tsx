@@ -61,8 +61,8 @@ function QuizSeven({ score, setScore }: QuizSevenProp) {
             </div>
           ))}
           <div className="mt-4 flex gap-10 justify-center items-center">
-            <ButtonNext currentStep={7} text="Next" />
-            <ButtonBack currentStep={7} text="Back" />
+            <ButtonNext currentStep={7} text="Avanti" />
+            <ButtonBack currentStep={7} text="Indietro" />
           </div>
         </div>
       </QuestionBox>

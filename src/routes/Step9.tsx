@@ -82,7 +82,7 @@ function QuizNine({ score, setScore }: QuizNineProp) {
                 </div>
               ))}
               <div className="mt-4 flex gap-10 justify-center items-center">
-                <ButtonBack currentStep={9} text="Back" />
+                <ButtonBack currentStep={9} text="Indietro" />
               </div>
             </div>
           </QuestionBox>

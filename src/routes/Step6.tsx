@@ -61,8 +61,8 @@ function QuizSix({ score, setScore }: QuizSixProp) {
             </div>
           ))}
           <div className="mt-4 flex gap-10 justify-center items-center">
-            <ButtonNext currentStep={6} text="Next" />
-            <ButtonBack currentStep={6} text="Back" />
+            <ButtonNext currentStep={6} text="Avanti" />
+            <ButtonBack currentStep={6} text="Indietro" />
           </div>
         </div>
       </QuestionBox>

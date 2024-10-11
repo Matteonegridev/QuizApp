@@ -56,8 +56,8 @@ function QuizEight({ score, setScore }: QuizEightProp) {
             </div>
           ))}
           <div className="mt-4 flex gap-10 justify-center items-center">
-            <ButtonNext currentStep={8} text="Next" />
-            <ButtonBack currentStep={8} text="Back" />
+            <ButtonNext currentStep={8} text="Avanti" />
+            <ButtonBack currentStep={8} text="Indietro" />
           </div>
         </div>
       </QuestionBox>
