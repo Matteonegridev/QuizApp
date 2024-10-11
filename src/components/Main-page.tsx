@@ -7,7 +7,7 @@ function MainPage() {
     <>
       <Header />
       <section
-        className="bg-bg-light dark:bg-bg-dark rounded-2xl grid 
+        className="bg-gradient-to-r from-slate-50 to-indigo-200 dark:bg-gradient-to-l dark:from-stone-500 dark:to-stone-700 rounded-2xl grid 
         grid-cols-[1fr_39rem] gap-5 sm:flex sm:flex-col sm:mt-8 md:grid-cols-[1fr_15rem] md:items-center "
       >
         <div className="p-8 [&>*]:text-pretty flex flex-col gap-12 sm:gap-16">
@@ -15,12 +15,12 @@ function MainPage() {
             Quizs
           </h1>
           <div>
-            <p className="text-black dark:text-white text-lg font-black   font-paragr">
+            <p className="text-black dark:text-white text-xl font-normal font-paragr">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
             </p>
           </div>
           <div>
-            <p className="text-black dark:text-white text-lg font-black  font-paragr">
+            <p className="text-black dark:text-white text-xl font-normal  font-paragr">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
               dolore qui voluptatem aut tenetur quod unde vel, veritatis est
               iste ipsam

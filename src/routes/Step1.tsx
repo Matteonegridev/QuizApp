@@ -29,6 +29,7 @@ function QuizOne({ score, setScore }: QuizOneProp) {
   const handleAnswer = (answer: string) => {
     const correctAnswer = questions[0].answer;
 
+    // risposta selezionata === risposta corretta ma scelta diversa:
     if (selectedAnswer === correctAnswer && answer !== correctAnswer) {
       setScore(score - 1);
     }
