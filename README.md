@@ -14,12 +14,6 @@
 - **Educazione**: Fornire agli utenti le conoscenze necessarie per adottare pratiche sostenibili nella loro vita quotidiana.
 - **Coinvolgimento**: Creare un'esperienza interattiva e coinvolgente per gli utenti.
 
-## Come funziona
-
-1. **Inizia il quiz**: Gli utenti possono avviare il quiz e rispondere alle domande a risposta multipla.
-2. **Ricevi feedback**: Dopo ogni risposta, gli utenti ricevono un feedback immediato per migliorare la loro comprensione.
-3. **Completa il quiz**: Al termine del quiz, gli utenti possono vedere il loro punteggio e rivedere le risposte corrette.
-
 ## Tecnologie utilizzate
 
 - **React**: Per la costruzione dell'interfaccia utente.
