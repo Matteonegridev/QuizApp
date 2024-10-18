@@ -2,7 +2,12 @@ import ButtonNext from "../utils/ButtonNext";
 import Header from "./Header";
 import Image from "./Image";
 
-function MainPage() {
+type MainPageProp = {
+  step: number;
+  setStep: React.Dispatch<React.SetStateAction<number>>;
+};
+
+function MainPage({ setStep }: MainPageProp) {
   return (
     <>
       <Header />
@@ -31,7 +36,10 @@ function MainPage() {
             </p>
           </div>
           <div className="2xl:pt-24 sm:flex sm:justify-center sm:items-center sm:text-center ">
-            <ButtonNext currentStep={0} text="Comincia!" />
+            <ButtonNext
+              onClick={() => setStep((prev) => prev + 1)}
+              text="Comincia!"
+            />
           </div>
         </div>
         <div className="p-8 sm:hidden ">

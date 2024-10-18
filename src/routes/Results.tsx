@@ -5,12 +5,19 @@ import { Link } from "react-router-dom";
 type ScorePageProp = {
   score: number;
   setScore: React.Dispatch<React.SetStateAction<number>>;
+  setQuery: React.Dispatch<React.SetStateAction<number>>;
+  setStep: React.Dispatch<React.SetStateAction<number>>;
 };
 
-function ScorePage({ score, setScore }: ScorePageProp) {
+function ScorePage({ score, setScore, setQuery, setStep }: ScorePageProp) {
   const [isShow, setIsShow] = useState(false);
 
-  const onRestart = () => setScore(0);
+  const onRestart = () => {
+    setScore(0);
+    setIsShow(false);
+    setQuery(0);
+    setStep(1);
+  };
 
   return (
     <>
