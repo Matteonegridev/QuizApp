@@ -6,7 +6,7 @@ import ScorePage from "./routes/Results.tsx";
 import Quiz from "./routes/Quiz.tsx";
 
 function App() {
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState<number>(0);
   const [query, setQuery] = useState<number>(0);
   const [step, setStep] = useState<number>(1);
 

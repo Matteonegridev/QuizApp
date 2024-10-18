@@ -1,4 +1,11 @@
-export const questions = [
+type Questions = {
+  id: number;
+  question: string;
+  options: string[];
+  answer: string;
+}[];
+
+export const questions: Questions = [
   {
     id: 1,
     question: "Qual è l'obiettivo principale dell'economia circolare?",
