@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
-import QuestionBox from "../utils/Question-box";
+import QuestionBox from "../components/Question-box";
 import Question from "../utils/Questions";
 import LoadingPage from "./Loading";
 import { useNavigate } from "react-router-dom";
