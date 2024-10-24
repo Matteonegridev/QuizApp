@@ -26,10 +26,6 @@ function Quiz({ score, setScore, query, setQuery, setStep }: QuizProps) {
     const correctAnswer = currentQuestion.answer;
 
     if (correctAnswer === answer) {
-      setScore(score - 1);
-    }
-
-    if (correctAnswer === answer) {
       setScore(score + 1);
     }
 
